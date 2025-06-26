@@ -17,4 +17,4 @@ jobs:
 
       - name: Only runs on pull_request and prints the PR title and PR author’s username
         if: github.event_name == 'pull_request'
-        run: echo format("This is a pull request - {0}", github.triggering_actor)
+        run: "This is a pull request - ${{ github.triggering_actor }}"
