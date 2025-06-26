@@ -25,5 +25,5 @@ jobs:
 
       - name: Repository Owner Verification
         if: github.repository_owner == github.triggering_actor
-        run: echo "Running because repo owner ${{ github.repository_owner }} == triggering user ${{ github.triggering_actor }}
+        run: echo "Running because repo owner ${{ github.repository_owner }} == triggering user ${{ github.triggering_actor }}"
         
