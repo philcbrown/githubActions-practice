@@ -20,7 +20,7 @@ jobs:
         run: echo "This is a pull request called ${{ github.event.pull_request.title }} by ${{ github.triggering_actor }}"
 
       - name: executes only if the commit message includes the keyword [run-tests]
-        if: contains('github.event.head_commit.message', 'run-tests')
+        if: contains(github.event.head_commit.message, 'run-tests')
         run: echo "Executing tests as requested..."
 
       - name: Repository Owner Verification
