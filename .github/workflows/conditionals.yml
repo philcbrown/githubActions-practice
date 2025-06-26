@@ -1,0 +1,15 @@
+name: Conditionals
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: run on release
+        if: github.ref == 'refs/heads/release'
+        run: echo "This is the release branch"
